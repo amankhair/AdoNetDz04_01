@@ -1,0 +1,33 @@
+﻿<Window x:Class="AdoNetDz04_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdoNetDz04_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Group"
+                          x:Name="GroupTable"
+                          Click="GroupTable_OnClick"/>
+                <MenuItem Header="Status"
+                          x:Name="StatusTable"
+                          Click="StatusTable_OnClick"/>
+                <MenuItem Header="Pavilion"
+                          x:Name="PavilionTable"
+                          Click="PavilionTable_OnClick"/>
+                <MenuItem Header="Model"
+                          x:Name="ModelTable"
+                          Click="ModelTable_OnClick"/>
+            </Menu>
+        </DockPanel>
+
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
